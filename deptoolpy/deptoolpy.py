@@ -42,12 +42,20 @@ def import_pyjnius(class_path):
 class DepToolPy:
     class_path = os.path.join(os.path.dirname(__file__), 'depTool')
 
-    def __init__(self):
-        # All classes should be imported in __init__()
+    def __init__(self, source_fields=None, target_fields=None):
         autoclass = import_pyjnius(DepToolPy.class_path)
         self._jstr = autoclass('java.lang.String')
         self._dt = autoclass('hu.nytud.gate.util.DepTool')
-        self.target_fields = ['pos', 'fature']
+
+        # Field names for e-magyar TSV
+        if source_fields is None:
+            source_fields = {}
+
+        if target_fields is None:
+            target_fields = []
+
+        self.source_fields = source_fields
+        self.target_fields = target_fields
 
     def process_sentence(self, sen, field_names):
         for tok in sen:
