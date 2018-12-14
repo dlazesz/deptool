@@ -13,12 +13,12 @@ from deptoolpy import DepToolPy
 # Initialize tagger as wanted...
 dt = DepToolPy()
 
-# TODO: Bálint: command should be the usual names e.g. /emMorph, /emDep, etc.
 # Create app with the desired parameters...
 app = create_rest_app(__name__, command='/depTool', internal_app=dt)
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1 and sys.argv[1] == '--pipe':  # TODO: It just a tech preview, implement it properly!
+    # It is just a tech preview. Properly implemented in e-magyar-tsv: https://github.com/dlt-rilmta/e-magyar-tsv !
+    if len(sys.argv) > 1 and sys.argv[1] == '--pipe':
         from TSVRESTTools.tsvhandler import process
         sys.stdout.writelines(process(sys.stdin, dt))
     else:
