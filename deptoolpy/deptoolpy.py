@@ -73,7 +73,7 @@ class DepToolPy:
 
     @staticmethod
     def prepare_fields(field_names):
-        return [field_names['string'], field_names['lemma'], field_names['hfstana']]
+        return [field_names['form'], field_names['lemma'], field_names['xpostag']]
 
 
 if __name__ == '__main__':
