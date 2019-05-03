@@ -45,6 +45,7 @@ def import_pyjnius():
 
 class DepToolPy:
     class_path = os.path.join(os.path.dirname(__file__), 'depTool')
+    pass_header = True
 
     def __init__(self, source_fields=None, target_fields=None):
         if not jnius_config.vm_running:

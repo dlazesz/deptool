@@ -1,4 +1,4 @@
-# DepToolPy
+# DepToolPy  [DEPRECATED]
 Python wrapper and REST API for the original [depTool](https://github.com/dlt-rilmta/hunlp-GATE/blob/master/Lang_Hungarian/src/hu/nytud/gate/util/DepTool.java) class form [Magyarlánc](https://github.com/zsibritajanos/magyarlanc)
 
 ## Usage
