@@ -17,7 +17,7 @@ dt = DepToolPy()
 app = create_rest_app(__name__, command='/depTool', internal_app=dt)
 
 if __name__ == '__main__':
-    # It is just a tech preview. Properly implemented in e-magyar-tsv: https://github.com/dlt-rilmta/e-magyar-tsv !
+    # It is just a tech preview. Properly implemented in e-magyar (emtsv): https://github.com/dlt-rilmta/emtsv !
     if len(sys.argv) > 1 and sys.argv[1] == '--pipe':
         from TSVRESTTools.tsvhandler import process
         sys.stdout.writelines(process(sys.stdin, dt))
